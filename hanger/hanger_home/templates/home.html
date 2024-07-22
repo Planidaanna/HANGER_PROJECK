@@ -1,0 +1,88 @@
+
+{% extends "base.html" %}
+
+{% block main_content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+{% comment %} Первый блок {% endcomment %}
+<div class = "container1">
+    
+    <image src="{% static 'images/one1.jpg' %}" > 
+    {% comment %} <div class = "c-o">
+        <div class ='c-o1'>«Я не преследую цели соответствовать трендам»:</div>
+        <div class = 'c-o2' >Асмат Чкотуа о буднях инфлюэнсера, идеальном образе и охоте на винтаж</div>
+    </div> {% endcomment %}
+    <div class = 'c-o'>
+       <div class="corner-box-1">
+         <div class="corner-textbox-1">
+          <div class ='c-o1'>«Я не преследую цели соответствовать трендам»:</div>
+          <div class = 'c-o2' >Асмат Чкотуа о буднях инфлюэнсера, идеальном образе и охоте на винтаж</div>
+          </div>
+        </div>
+      </div>
+  
+</div>   
+
+{% comment %} Второй блок {% endcomment %}
+<div class="container2">
+    <image src="{% static 'images/vidio1.gif' %}" >
+  {% comment %} <video loop="loop" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+    
+    <source src="{% static 'images/vidio_onepage.mp4' %}" type="video/mp4"> </source>
+  </video> {% endcomment %}
+</div>
+
+{% comment %} Третий блок {% endcomment %}
+<div class= "container3"> 
+     <div> 
+      <ul class="hover-effect-scale"> 
+          <li> 
+            <image src="{% static 'images/l9.jpg' %}" >
+            <div> 
+              <h3>«Мода — это то, из чего мы сами себя складываем ежедневно»</h3> 
+              <p>Миучча Прада (дизайнер)</p> 
+            </div> 
+          </li> 
+        </ul> 
+    </div>
+
+    <div> 
+        <ul class="hover-effect-scale"> 
+            <li> 
+                <image src="{% static 'images/l5.jpg' %}" height= 500px>
+              <div> 
+                <h3>«Стиль — это способ рассказать о себе, не сказав ни слова»</h3> 
+                <p>Рейчел Зоуи (стилист)</p> 
+              </div> 
+            </li> 
+          </ul> 
+    </div> 
+    <div> 
+      <ul class="hover-effect-scale"> 
+          <li> 
+            <image src="{% static 'images/l10.webp' %}">
+            <div> 
+              <h3>«Элегантность — это единственная мода, которая не проходит»</h3> 
+              <p>Одри Хепберн (актриса)</p> 
+            </div> 
+          </li> 
+        </ul> 
+  </div>
+</div>
+
+{% comment %} Четвертый блок {% endcomment %}
+<div class="wrapper">
+  <h1><span>Прочти!</span></h1>
+  <h3> 
+    МЫ ЖИВЁМ В ЭПОХУ ТОТАЛЬНОГО ИНТЕРНЕТА, 
+    НАС БОЛЬШЕ НЕ ПУГАЮТ ПОТОКИ ИНФОРМАЦИИ И ОБИЛИЕ КАНАЛОВ ОБЩЕНИЯ С БРЕНДАМИ. 
+    МЫ ПРИНИМАЕМ РЕШЕНИЕ О ПОКУПКЕ, ЗАХОДЯ В INSTAGRAM.
+    СКРОЛЛИМ ЛЕНТУ СОЦСЕТЕЙ, ГДЕ GUCCI И CELINE СОСЕДСТВУЮТ С АККАУНТОМ НАЧИНАЮЩЕГО ДИЗАЙНЕРА ИЗ ОМСКА
+    И ФОТОГРАФИЯМИ КОТОВ, ДЕТЕЙ, ОДНОКЛАССНИКОВ. 
+    СУЩЕСТВЕННУЮ ЧАСТЬ ЖИЗНИ МЫ ПРОВОДИМ В ВИРТУАЛЬНОМ МИРЕ, 
+    НАХОДЯСЬ В ПОТОКЕ ИНФОРМАЦИОННОГО ШУМА И ПЫТАЯСЬ ВЫДЕЛИТЬ ИЗ НЕГО ЧТО-ТО ИСКРЕННЕЕ И НАСТОЯЩЕЕ.
+  </h3>
+</div>
+
+{% endblock main_content %}

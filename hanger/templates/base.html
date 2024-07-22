@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+</head>
+<body>
+
+{% comment %} <header class="header">
+    <img src="{% static 'icon/iconbase1.png' %}">
+    <a href= "#">hanger</a>
+    <a href= "#">Модные тенденции</a>
+    <a href= "#"> Образы и новинки</a>
+     
+</header> {% endcomment %}
+<ul class="nav">
+    <img src="{% static 'icon/iconbase1.png' %}">
+    <li><a href="{% url 'hanger_home' %}">hanger</a></li>
+    <li><a href="#">Модные тенденции</a></li>
+    <li><a href="#">Образы и новинки</a></li>
+    <li><a href="#">Вход</a></li>
+  </ul>
+
+{% block main_content %}
+<!--Содержимое страницы-->
+{% endblock main_content %}
+
+
+{% comment %} <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить</button>
+  </form> {% endcomment %}
+
+</body>
+</html>
