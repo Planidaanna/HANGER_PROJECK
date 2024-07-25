@@ -24,15 +24,30 @@
   </ul>
 
 {% block main_content %}
+
 <!--Содержимое страницы-->
+
 {% endblock main_content %}
 
-
-{% comment %} <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Отправить</button>
-  </form> {% endcomment %}
-
+<footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><img src="{% static 'icon/icons8-instagram-50.png' %}">
+    <a href="#"><img src="{% static 'icon/icons8-логотип-telegram-50.png' %}">
+    <a href="#"><img src="{% static 'icon/icons8-whatsapp-50.png' %}">
+    <a href="#"><img src="{% static 'icon/icons8-facebook-новый-50.png' %}">
+    <div class="row">
+    <ul>
+        <li><a href="/user_agreement/">Пользовательское соглашение</a></li>
+        <li><a href="/legal_information/">Правовая информация</a></li>
+        <li><a href="/privacy_policy/">Политика конфиденциальности</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+    INFERNO Copyright © 2024 Inform - All rights reserved || Designed By: Ann Planida 
+    </div>
+    </div>
+    </footer>
 </body>
 </html>

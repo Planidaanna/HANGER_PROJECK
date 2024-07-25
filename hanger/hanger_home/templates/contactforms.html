@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/contactform.css' %}" />
+
+
+<div class = 'form_cont'>
+    <h2>&bull; Отправь свои контакты и мы свяжемся с вами &bull;</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+         <button type="submit" class = 'button_form'>Отправить</button>
+    </form> 
+</div>
+
+  
+{% endblock main_content %}

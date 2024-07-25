@@ -9,10 +9,6 @@
 <div class = "container1">
     
     <image src="{% static 'images/one1.jpg' %}" > 
-    {% comment %} <div class = "c-o">
-        <div class ='c-o1'>«Я не преследую цели соответствовать трендам»:</div>
-        <div class = 'c-o2' >Асмат Чкотуа о буднях инфлюэнсера, идеальном образе и охоте на винтаж</div>
-    </div> {% endcomment %}
     <div class = 'c-o'>
        <div class="corner-box-1">
          <div class="corner-textbox-1">
@@ -27,10 +23,7 @@
 {% comment %} Второй блок {% endcomment %}
 <div class="container2">
     <image src="{% static 'images/vidio1.gif' %}" >
-  {% comment %} <video loop="loop" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-    
-    <source src="{% static 'images/vidio_onepage.mp4' %}" type="video/mp4"> </source>
-  </video> {% endcomment %}
+
 </div>
 
 {% comment %} Третий блок {% endcomment %}
@@ -61,7 +54,7 @@
     <div> 
       <ul class="hover-effect-scale"> 
           <li> 
-            <image src="{% static 'images/l10.webp' %}">
+           <image src="{% static 'images/l10.webp' %}">
             <div> 
               <h3>«Элегантность — это единственная мода, которая не проходит»</h3> 
               <p>Одри Хепберн (актриса)</p> 
@@ -83,6 +76,69 @@
     СУЩЕСТВЕННУЮ ЧАСТЬ ЖИЗНИ МЫ ПРОВОДИМ В ВИРТУАЛЬНОМ МИРЕ, 
     НАХОДЯСЬ В ПОТОКЕ ИНФОРМАЦИОННОГО ШУМА И ПЫТАЯСЬ ВЫДЕЛИТЬ ИЗ НЕГО ЧТО-ТО ИСКРЕННЕЕ И НАСТОЯЩЕЕ.
   </h3>
+</div>
+
+{% comment %} пятый блок {% endcomment %}
+<div class="container5">
+  <div class="f1">
+    <image src="{% static 'images/five1.jpeg' %}" height = 500px width = auto>
+  </div>
+
+ <div class="t">
+  <p> Жизнь </p>
+ </div>
+
+  <div class="f2">
+    <image src="{% static 'images/five2.jpg' %}" height = 500px width = max>
+  </div>
+
+  <div class="t">
+  <p>Стиль</p>
+ </div>
+
+  <div class="f3">
+    <image src="{% static 'images/five3.jpg' %}"height = 500px width = max>
+  </div>
+
+  <div class="t">
+    <p> Мода </p>
+   </div>
+</div>
+
+{% comment %} шестой блок {% endcomment %}
+<div class="cont-for-form">
+  <div class = "t-o">
+    &bull;Хочешь подобрать вещи, которые подойдут именно тебе?&bull;
+  </div>
+
+  <div class = "t-o">
+    &bull;Хочешь найти свой неповторимый стиль?&bull;
+  </div>
+
+  <div class = "t-o">
+    &bull; А может просто разобрать и улучшить свой гардероб?&bull;
+  </div>
+
+  <div>
+    Тогда нажимай, заполняй заявку и мы свяжемся с тобой
+  </div>
+
+  <div class = "t-o">
+    &bull; Обрети свой уникальный и неповторимый стиль&bull;
+  </div>
+  
+  <div class = "t-o" >
+    &bull;А мы в этом поможем&bull;
+  </div>
+  
+  {% comment %} <div class = 'ww'>
+  <a href="/contact_form/" class = 'a'> ОФОРМИТЬ </a>
+  <div> {% endcomment %}
+  <image src="{% static 'images/icons8-down-50.png' %}">
+  <div class ='icon-c'>
+    <a href="/contact_form/" class = 'a'> <image src="{% static 'images/st1.png' %}" height = 80px></a>
+  </div>
+  
 </div>
 
 {% endblock main_content %}

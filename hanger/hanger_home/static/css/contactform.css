@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.form{
+    font-family: 'Titillium Web';
+}
+.form_cont {
+    border: solid 3px #3b3a39;
+    width: 700px;
+    height: auto;
+    margin: 10px auto;
+    padding: 20px 20px;
+    position: relative;
+    text-align: center;
+    
+}
+
+h2 {
+    color: #474544;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button_form {
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    font-family: 'Titillium Web';
+}
+.form_cont> form > div {
+    text-align: left;
+	color: #474544;
+	font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+	margin: 5px 10px;
+	padding: 0 0 0.875em 0;
+    text-transform: uppercase;
+	width: 100%;
+}
+
+input[type='text'] {
+	background: none;
+    border: none;
+    border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	width: 100%;
+}

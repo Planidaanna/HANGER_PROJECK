@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.p_title{
+    font-family: 'Titillium Web';
+    text-transform: uppercase;
+    font-size: x-large;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: static;
+    padding-bottom: 8px;
+}
+
+.block-content{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+h2{
+    font-family: 'Titillium Web';  
+    text-align: center;
+}
