@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block main_content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/fashion_trend.css' %}" />
+
+<div class="post-news-w">
+   <div class = "title-post"> 
+    &bull; {{ news_trend.title }}&bull;
+   </div>
+   <div class = "title-text-post">
+        {{ news_trend.title_text}}
+    </div>
+    <div class = "text-post">
+        {{ news_trend.text}}
+    </div>
+   
+     {% comment %} <img src="{{ news_trend.image.url }}" class = "img_news" >  {% endcomment %}
+</div> 
+
+<a href="{% url 'fashion_news' %}" class = 'a1'>...Вернуться на новостную страницу</a>
+
+{% endblock main_content %}

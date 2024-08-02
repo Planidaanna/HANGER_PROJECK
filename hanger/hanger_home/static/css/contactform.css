@@ -15,10 +15,11 @@
     position: relative;
     text-align: center;
     
+    
 }
 
 h2 {
-    color: #474544;
+    color: #000000;
     font-size: 30px;
     letter-spacing: 3px;
     text-align: center;
@@ -27,7 +28,7 @@ h2 {
 
 .button_form {
     background: none;
-    border: solid 2px #474544;
+    border: solid 2px #000000;
     color: #474544;
     cursor: pointer;
     font-size: medium;
@@ -39,7 +40,7 @@ h2 {
 }
 .form_cont> form > div {
     text-align: left;
-	color: #474544;
+	color: #000000;
 	font-size: 1.000em;
     font-weight: 400;
     letter-spacing: 1px;

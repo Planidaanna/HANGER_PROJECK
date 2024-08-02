@@ -7,19 +7,12 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 </head>
 <body>
-
-{% comment %} <header class="header">
-    <img src="{% static 'icon/iconbase1.png' %}">
-    <a href= "#">hanger</a>
-    <a href= "#">Модные тенденции</a>
-    <a href= "#"> Образы и новинки</a>
-     
-</header> {% endcomment %}
+    <image src="{% static 'images/fon_news.jpg' %}" class="background-image">
 <ul class="nav">
     <img src="{% static 'icon/iconbase1.png' %}">
     <li><a href="{% url 'hanger_home' %}">hanger</a></li>
-    <li><a href="#">Модные тенденции</a></li>
-    <li><a href="#">Образы и новинки</a></li>
+    <li><a href="{% url 'fashion_news' %}">Модные тенденции</a></li>
+    <li><a href="#">Подборка образов</a></li>
     <li><a href="#">Вход</a></li>
   </ul>
 

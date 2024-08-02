@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block main_content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/fashion_trend.css' %}" />
+
+<div class="cont">  
+    <div class = "container_news">
+        <div class="list_for_news">
+            
+            {% for new_t in news_trend %}
+            
+                <a href="../fashion_trends/{{ new_t.id }}/" style="none"> 
+                    <div class="news">
+                        <div>&bull; &bull; &bull; &bull; &bull;{{ new_t.title }}</div>
+                        <div>{{ new_t.title_text }}</div>
+                        <img src="{{ new_t.image.url }}" class = "img_news">
+                        
+                    </div>
+                </a>
+                
+                
+            {% endfor %}
+        </div>
+    </div>
+</div> 
+<div class="cont-page-paginator">
+    <nav class="list-pages">
+        <ul>
+            {% for p in paginator.page_range %}
+                       {% if page_obj.number == p %}
+            <li class="page-num page-num-selected">{{ p }}</li>
+                       {% else %}
+            <li class="page-num">
+                <a href="?page={{ p }}">{{ p }}</a>
+            </li>
+                       {% endif %}
+            {% endfor %}
+        </ul>
+    </nav> 
+</div>
+
+{% endblock main_content %}

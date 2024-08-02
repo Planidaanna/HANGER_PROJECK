@@ -16,5 +16,3 @@ urlpatterns = [
     path('legal_information/', LegalInformation.as_view(), name="legal_information"),
     path('privacy_policy/', PrivacyPolicy.as_view(), name="privacy_policy"),     
 ]   
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

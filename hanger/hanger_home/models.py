@@ -12,7 +12,7 @@ class Contact_with_to_a_stylist(models.Model):
     contact_by_telegram = models.BooleanField(default=False, verbose_name='Связь по telegram')
     contact_by_vk = models.BooleanField(default=False, verbose_name='Связь по VK')
     contact_by_whatsApp = models.BooleanField(default=False, verbose_name='Связь по whatsApp')
-    client_request= models.CharField(max_length=100, default='Просто разобрать свой гардироб', verbose_name='Запрос клиента') 
+    client_request= models.CharField(max_length=100, default='Просто разобрать свой гардероб', verbose_name='Запрос клиента') 
 
     class Meta:
         db_table = 'Contact_with_to_a_stylist' 
