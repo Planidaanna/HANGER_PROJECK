@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'hanger',
     'hanger_home',
     'fashion_trends',
+    'collection_fashon',
 ]
 
 MIDDLEWARE = [

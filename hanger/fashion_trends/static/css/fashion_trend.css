@@ -70,6 +70,7 @@
     text-align: center;
     border-left: 5px dotted black;
     border-bottom: 5px dotted black;
+    box-shadow: 0 0 100px rgba(0 0 0 / 50%);
 }
 
 
