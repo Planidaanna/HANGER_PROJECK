@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'hanger_home',
     'fashion_trends',
     'collection_fashon',
+    'users',
+    
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = ('/media/')
+
+LOGIN_REDIRECT_URL = 'hanger_home'
+LOGOUT_REDIRECT_URL = 'hanger_home'
+LOGIN_URL = 'login'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  
+    'users.authentication.EmailAuthBackend',  
+]
+
+AUTH_USER_MODEL = 'users.User'
+DEFAULT_USER_IMAGE = MEDIA_URL + 'users/default.png'
+
+#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "planidaann18@gmail.com" 
+EMAIL_HOST_PASSWORD = "iqyf vcdz kgtu jiha"
+EMAIL_USE_SSL = True
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+EMAIL_ADMIN = EMAIL_HOST_USER

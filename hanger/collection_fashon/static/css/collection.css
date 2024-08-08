@@ -11,8 +11,14 @@
     justify-content: center;
     align-items: center;
 }
+.collections> a{
+    text-decoration: none;
+}
 .c-col{
     margin: 10px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
 }
 .col-on{
     background-color: white;
@@ -51,8 +57,12 @@
 .col-on> p{
     font-family: 'Titillium Web';
     text-transform: uppercase; 
+    color: black;
 }
 
+.c-col> a> .favorit {  
+ height: 30px   
+} 
 
 .f-f>p, .f-f{
     font-family: 'Titillium Web';
@@ -100,3 +110,8 @@
   button:hover:after{
     width: 100%;
   } 
+
+.favorit {
+    height: 40px;
+    width: auto;
+}

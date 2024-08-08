@@ -25,7 +25,9 @@ urlpatterns = [
     path('', include('hanger_home.urls')),
     path('fashion_trends/', include('fashion_trends.urls')),
     path('collection_fashon/',include('collection_fashon.urls')),
-    # path('collection_fashon/', include('collection_fashon.urls')), 
+    path('users/', include('users.urls')),
+    
+    
 ]
 
 if settings.DEBUG:

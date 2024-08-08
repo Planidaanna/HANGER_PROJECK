@@ -22,7 +22,7 @@ body {
   box-sizing: border-box;
   transition: all .35s ease;
 }
-.nav > img{
+.nav > .img-h{
     height: 40px;
     width: 40px;
 }
@@ -79,7 +79,11 @@ body {
   color: #070808;
 }
 
-
+.user_p_img{
+  height: 25px;
+  width: auto;
+  padding-right: 0px;
+} 
 .footer{
   background-color: rgba(217, 217, 217, 0.742);
   padding:0px 0px;

@@ -33,6 +33,15 @@ class Fashion_collection(ListView):
         context = super().get_context_data(**kwargs)
         context['form'] = FilterForm(self.request.GET or None)
         return context
+from django.views.generic import TemplateView
+#Create your views here.
+
+
+class Favorites(TemplateView):
+    template_name  = 'favorites.html'
+    extra_context = {
+        'title': 'Главная страница'
+    }
 
 # class AddToFavoritesView(View):
 #     template_name = 'favorites.html'

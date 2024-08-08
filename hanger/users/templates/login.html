@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+{% comment %} <div data-gb-custom-block data-tag="extends" data-0='base.html'></div>
+
+<div data-gb-custom-block data-tag="block"> {% endcomment %}
+<div class= "a_h_o">
+<span class ='a_h'>&bull; &bull; &bull; Авторизация &bull; &bull; &bull;</span>
+
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <button class="but_a_o">Войти</button>
+    <span><a href="{% url 'password_reset' %}">Забыли пароль?</a></span>
+</form>
+</div>
+
+{% comment %} </div> {% endcomment %}
+
+{% endblock main_content %}

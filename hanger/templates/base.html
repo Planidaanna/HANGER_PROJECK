@@ -9,14 +9,21 @@
 <body>
     <image src="{% static 'images/fon_news.jpg' %}" class="background-image">
 <ul class="nav">
-    <img src="{% static 'icon/iconbase1.png' %}">
+    <img src="{% static 'icon/iconbase1.png' %}" class="img-h">
     <li><a href="{% url 'hanger_home' %}">hanger</a></li>
     <li><a href="{% url 'fashion_news' %}">Модные тенденции</a></li>
     <li><a href="{% url 'fashion_collection' %}">Образы и новинки</a></li>
-    <li><a href="#">Вход</a></li>
-  </ul>
-
-{% block main_content %}
+    {% comment %} <li><a href="#">Вход</a></li> {% endcomment %}
+    {% if user.is_authenticated %} <!--Авторизован пользователь?-->
+         <li class="last">
+            <li><a href="#">Твой шкаф</a></li>
+            <img src="{% static 'icon/user_prof.png' %}" class="user_p_img">
+            <a href="{%url 'profile'%}"> {{user.username}}</a> | <a href="{% url 'logout' %}">Выйти</a></li>
+        {% else %}<!-- не авторизован-->
+            <li class="last"><a href="{% url 'login' %}">Войти</a> | <a href=" {%url 'register'%}">Регистрация</a></li>
+    {% endif %}
+</ul>
+ {% block main_content %} 
 
 <!--Содержимое страницы-->
 
