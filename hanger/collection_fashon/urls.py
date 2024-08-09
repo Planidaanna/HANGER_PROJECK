@@ -5,8 +5,5 @@ import collection_fashon.views as collection_fashon
 # from hanger_home.views import ContactCreateForm
 from collection_fashon.views import *
 urlpatterns = [
-    
-    path('', collection_fashon.Fashion_collection.as_view(), name="fashion_collection"),  
-    # path('add_to_favorites',collection_fashon. AddToFavoritesView.as_view(), name='add_to_favorites'),
-    path('favorites/',collection_fashon.Favorites.as_view(), name='favorites'),
+    path('', collection_fashon.Fashion_collection.as_view(), name="fashion_collection"),    
 ]   

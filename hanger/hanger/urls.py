@@ -26,8 +26,8 @@ urlpatterns = [
     path('fashion_trends/', include('fashion_trends.urls')),
     path('collection_fashon/',include('collection_fashon.urls')),
     path('users/', include('users.urls')),
-    
-    
+    path('your_hanger/', include('your_hanger.urls')),
+    path('chat_users/', include('chat_users.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block main_content %}
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/collection.css' %}" />
 <script src="{% static 'js/scripts.js' %}"></script>
@@ -14,28 +15,19 @@
          <img src="{% static 'images/settings.png' %}" class="filtr-img" alt="Фильтр" id="filterImage">
         <form method="get" id="filterForm" class="f-f">
             {{ form.as_div }}
-            <button type="submit"><span>ОТФИЛЬТРОВАТЬ</span></button>
+            <button type="submit" class = 'filtr-b'><span>ОТФИЛЬТРОВАТЬ</span></button>
         </form> 
     </div>
-    <a href="{% url 'favorites' %}"><img src="{% static 'images/favorite_1.png' %}" class = "favorit"> </a>
     
 </div>
- 
+
 <div class = 'collections'>
     {% for co in collections %}
-    <a href="../collection_fashon/{{ co.id }}/" style="none"> 
        <div class= 'col-on'> 
-            <img src="{% static 'images/favorite_3221898.png' %}" class="favorit-img" alt="Избранное" id="favoritImage">
             <img src="{{ co.image.url }}" class='image-u'>
             <p>{{ co.title }} </p>
        </div>   
-    </a>              
     {% endfor %}
 </div>
-
-
-
-</div>
-
 <script src="{% static 'js/scripts.js' %}"></script>
 {% endblock main_content %}

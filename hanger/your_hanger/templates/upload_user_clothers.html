@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+<div class='prof'>
+<h1>Загрузи фото вещи в свой виртуальный шкаф</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p}}
+    {% comment %} <select name="category">
+        <option value="">Выберите категорию</option>
+        {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endfor %}
+    </select> {% endcomment %}
+    <button type="submit" class = 'p-b'>Добавить</button>
+</form>
+
+<a href="{% url 'my_list' %}">Открой свой шкаф </a>
+
+</div>
+
+{% endblock main_content %}

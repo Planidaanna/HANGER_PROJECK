@@ -13,13 +13,14 @@
     <li><a href="{% url 'hanger_home' %}">hanger</a></li>
     <li><a href="{% url 'fashion_news' %}">Модные тенденции</a></li>
     <li><a href="{% url 'fashion_collection' %}">Образы и новинки</a></li>
-    {% comment %} <li><a href="#">Вход</a></li> {% endcomment %}
-    {% if user.is_authenticated %} <!--Авторизован пользователь?-->
+    {% if user.is_authenticated %}
          <li class="last">
-            <li><a href="#">Твой шкаф</a></li>
+            <li><a href="{%url 'upload'%}">Твой шкаф</a></li>
             <img src="{% static 'icon/user_prof.png' %}" class="user_p_img">
-            <a href="{%url 'profile'%}"> {{user.username}}</a> | <a href="{% url 'logout' %}">Выйти</a></li>
-        {% else %}<!-- не авторизован-->
+            <a href="{%url 'profile'%}"> {{user.username}}</a>|<a href="{% url 'logout' %}">Выйти</a>
+            <a href="{% url 'chat' %}">Чат</a>
+        </li>
+        {% else %}
             <li class="last"><a href="{% url 'login' %}">Войти</a> | <a href=" {%url 'register'%}">Регистрация</a></li>
     {% endif %}
 </ul>

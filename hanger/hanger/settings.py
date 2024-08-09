@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'fashion_trends',
     'collection_fashon',
     'users',
-    
+    'your_hanger',
+    'chat_users',
 ]
 
 MIDDLEWARE = [

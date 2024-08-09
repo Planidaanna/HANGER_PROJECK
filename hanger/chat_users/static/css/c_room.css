@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.t-h{
+    font-size: xx-large;
+    font-family: 'Titillium Web';
+    text-transform: uppercase; 
+    color: rgba(0, 0, 0, 0.526);
+    text-align: center;
+}
+
+.user-list{
+    text-decoration: none;
+    font-family: 'Titillium Web';
+    text-transform: uppercase; 
+    text-align: left;
+}
+.messages{
+    /* width: 60%; */
+    /* margin: 20px auto;
+    padding: 20px;
+    height: 100px;  */
+    text-align: center;
+}
+.message{
+    /* margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px; */
+    background-color: white;
+    box-shadow: 0 0 100px rgba(0 0 0 / 50%);
+}
+.message-u {
+     text-decoration: none;
+    font-family: 'Titillium Web';
+    text-transform: uppercase; 
+    font-weight: bold;
+    margin-right: 5px; 
+    color: #33333369; /* Цвет имени пользователя */
+}
+.text{
+    font-weight: bolder;
+}
+.form-ch{
+    text-align: center;
+}

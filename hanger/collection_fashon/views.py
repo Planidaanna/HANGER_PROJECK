@@ -1,5 +1,5 @@
 from typing import Any
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.http import JsonResponse
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -37,23 +37,9 @@ from django.views.generic import TemplateView
 #Create your views here.
 
 
-class Favorites(TemplateView):
-    template_name  = 'favorites.html'
-    extra_context = {
-        'title': 'Главная страница'
-    }
+# class Favorites(TemplateView):
+#     template_name  = 'favorites.html'
+#     extra_context = {
+#         'title': 'Главная страница'
+#     }
 
-# class AddToFavoritesView(View):
-#     template_name = 'favorites.html'
-#     @csrf_exempt  # Отключаем защиту CSRF для этого метода (не рекомендуется в производственной среде)
-#     def post(self, request):
-#         try:
-#             data = json.loads(request.body)
-#             collection_id = data.get('id')
-
-#             # Здесь вы можете добавить код для сохранения коллекции в избранное
-#             # Например, добавление в базу данных или в сессию пользователя
-
-#             return JsonResponse({'message': 'Элемент успешно добавлен в избранное!'}, status=200)
-#         except Exception as e:
-#             return JsonResponse({'error': str(e)}, status=500)    
