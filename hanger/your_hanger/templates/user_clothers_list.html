@@ -6,15 +6,20 @@
 <link rel="stylesheet" href="{% static 'css/collection.css' %}" />
 <h1 class='u-c-l'>&bull; &bull; &bull; &bull; &bull;Твой виртуальный шкаф&bull; &bull; &bull; &bull; &bull;</h1>
 
-<div class=" collect">
+<div class="collect">
     <ul>
-    {% for item in items %}
-            <div class="col-on">
-                <img src="{{ item.image.url }}" alt="{{ item.title }}" class='image-u'>
-                <p>{{ item.category }}</p>
-            </div>
-    {% endfor %}
-    </ul> 
+        {% for item in items %}
+        <div class="col-on">
+            <img src="{{ item.image.url }}" alt="{{ item.title }}" class='image-u'>
+            <p>{{ item.category }}</p>
+            <form action="{% url 'delete_item' item.id %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" onclick="return confirm('Вы уверены, что хотите удалить это изображение?');">
+                   Удалить вещь
+                </button>
+            </form>
+        </div>
+        {% endfor %}
+    </ul>
 </div>
-
 {% endblock main_content %}

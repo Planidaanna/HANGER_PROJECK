@@ -51,3 +51,10 @@ def list(request, category_id=None):
         'items': items,
     }
     return render(request, 'user_clothers_list.html', context)
+@login_required
+def delete_item(request, item_id):
+    if request.method == "POST": 
+        Clothers_users_load.objects.get(id=item_id).delete()
+    else:
+        messages.error(request, "Не удалось удалить запись ")
+    return redirect(request.META.get('HTTP_REFERER', '/')) 
